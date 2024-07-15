@@ -1,0 +1,17 @@
+﻿
+
+<form method="post" asp-action="Add" enctype="application/x-www-form-urlencoded">
+    <input type="text" name="name" />
+    <input type="number" name="score" />
+
+    <button type="submit">Kaydet</button>
+</form>
+
+<hr />
+@*<a asp-controller="SortedSetType" asp-action="RemoveFirst">Baştan Sil</a>
+*@
+
+@foreach (var item in Model)
+{
+    <h3>@item  / <a asp-action="Remove" asp-route-name="@item">Sil</a></h3>
+}
